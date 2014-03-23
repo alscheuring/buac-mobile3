@@ -16,3 +16,4 @@ platforms/^.*
 platforms
 merges
 plugins
+config.xml
