@@ -12,3 +12,7 @@ platforms/^.*
 *.pyo
 *.so
 */.git/*
+.cordova
+platforms
+merges
+plugins
