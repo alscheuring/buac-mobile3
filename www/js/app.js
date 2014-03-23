@@ -24,25 +24,61 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.home', {
+      url: '/home',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'home-tab': {
+          templateUrl: 'templates/home.html',
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+
+
+    // the pet tab has its own child nav-view and history
+    .state('tab.brewer-index', {
+      url: '/brewers',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'brewers-tab': {
+          templateUrl: 'templates/brewer-index.html',
+          controller: 'BrewerIndexCtrl'
         }
       }
     })
+
+    .state('tab.brewer-detail', {
+      url: '/brewer/:brewerId',
+      views: {
+        'brewers-tab': {
+          templateUrl: 'templates/brewer-detail.html',
+          controller: 'BrewerDetailCtrl'
+        }
+      }
+    })
+
+
+    // the pet tab has its own child nav-view and history
+    .state('tab.beer-index', {
+      url: '/beers',
+      views: {
+        'beers-tab': {
+          templateUrl: 'templates/beer-index.html',
+          controller: 'BeerIndexCtrl'
+        }
+      }
+    })
+
+    .state('tab.beer-detail', {
+      url: '/beer/:beerId',
+      views: {
+        'beers-tab': {
+          templateUrl: 'templates/beer-detail.html',
+          controller: 'BeerDetailCtrl'
+        }
+      }
+    })
+
+
 
     .state('tab.adopt', {
       url: '/adopt',
@@ -63,7 +99,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
 
